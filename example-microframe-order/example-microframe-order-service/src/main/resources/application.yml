@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: order-service
+  profiles:
+      active: local
+
+
+---
+###################  开发环境的profile  ###################
+spring:
+  profiles: local
+

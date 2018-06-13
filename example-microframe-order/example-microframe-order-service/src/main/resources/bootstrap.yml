@@ -1,0 +1,65 @@
+server:
+  port: 10101
+
+spring:
+  application:
+    name: order-service
+  profiles:
+    active: local
+
+#访问服务注册中心管理页面需要加密码
+register-visite-name: admin
+register-visite-passwd: 123456
+
+
+---
+spring:
+  profiles: local
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:10001/eureka/
+
+---
+spring:
+  profiles: dev
+  rabbitmq:
+    addresses: 192.168.14.97
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      profile: dev
+      label: dev
+      uri: http://192.168.14.97:10900/
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://${register-visite-name}:${register-visite-passwd}@192.168.14.97:10001/eureka/
+
+---
+spring:
+  profiles: test
+  rabbitmq:
+    addresses: 192.168.14.98
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      profile: test
+      label: dev
+      uri: http://192.168.14.98:10900/
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://${register-visite-name}:${register-visite-passwd}@192.168.14.98:10001/eureka/
+

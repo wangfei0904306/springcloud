@@ -5,7 +5,7 @@ spring:
       active: local
 
 server:
-  port: 10001
+  port: 8761
 
 
 ---
@@ -20,4 +20,4 @@ eureka:
     register-with-eureka: false  #false 让服务注册中心不注册自己
     fetch-registry: false #false 让服务注册中心不注册自己
     service-url:
-          defaultZone: http://127.0.0.1:10001/eureka/
+          defaultZone: http://127.0.0.1:8761/eureka/
