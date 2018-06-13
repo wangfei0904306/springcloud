@@ -21,7 +21,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:10001/eureka/
+      defaultZone: http://localhost:8761/eureka/
 
 ---
 spring:
@@ -41,7 +41,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://${register-visite-name}:${register-visite-passwd}@192.168.14.97:10001/eureka/
+      defaultZone: http://${register-visite-name}:${register-visite-passwd}@192.168.14.97:8761/eureka/
 
 ---
 spring:
@@ -61,5 +61,5 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://${register-visite-name}:${register-visite-passwd}@192.168.14.98:10001/eureka/
+      defaultZone: http://${register-visite-name}:${register-visite-passwd}@192.168.14.98:8761/eureka/
 
