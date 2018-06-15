@@ -9,7 +9,7 @@
 	<packaging>pom</packaging>
 
 	<name>example-microframe-parent</name>
-	<description>核心依赖包</description>
+	<description>微服务的总父工程</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

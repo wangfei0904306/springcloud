@@ -1,13 +1,15 @@
 package com.example.microframe.order.facade.api;
 
 
+import com.example.microframe.common.RemoteResult;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
 import java.util.Map;
-import com.example.microframe.common
 
 /**
- * 数据中心服务接口
+ * 订单中心服务接口
  *
  * @author ff
  * @date 2018年04月13日19:55:54
@@ -24,10 +26,10 @@ public interface OrderServiceApi {
      * @author ff
      * @Date 2018年04月13日19:55:54
      */
-    //@RequestMapping("/getUserDeptInfo")
-    //RemoteResult<UserDeptInfo> getUserDeptInfo(@RequestBody UserDeptInfoQo userDeptInfoQo);
+    @RequestMapping("/getUserDeptInfo")
+    RemoteResult<List> getUserDeptInfo(@RequestBody Long userIdQO);
 
-    //@RequestMapping("/getDeptsMap")
-    //RemoteResult<Map<String, String>> getDeptsMap();
+    @RequestMapping("/getDeptsMap")
+    RemoteResult<Map<String, String>> getDeptsMap();
 
 }

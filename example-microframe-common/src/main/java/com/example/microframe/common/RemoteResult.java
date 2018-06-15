@@ -1,4 +1,4 @@
-package com.example.microframe.core.model;
+package com.example.microframe.common;
 
 /**
  * 远程调用返回封装
@@ -95,7 +95,7 @@ public class RemoteResult<T> {
     }
 
     public static <T> RemoteResult<T> error(Integer code, String msg, T body) {
-        return new RemoteResult<>(code, msg, body);
+        return new RemoteResult<T>(code, msg, body);
     }
 
 }

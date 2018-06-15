@@ -4,51 +4,22 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example.microframe</groupId>
-	<artifactId>example-microframe-order</artifactId>
+	<artifactId>example-microframe-common</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
-	<name>example-microframe-order</name>
-	<description>订单服务</description>
+	<name>example-microframe-common</name>
+	<description>常用工具类</description>
 
-	<parent>
-		<groupId>com.example.microframe</groupId>
-		<artifactId>example-microframe-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-
-	<modules>
-		<module>example-microframe-order-service</module>
-		<module>example-microframe-order-facade</module>
-	</modules>
 
 	<properties>
-		<start-class>com.xx.webapps.api.main.WebappsApiBidMain</start-class> <!--解决打包时找不到main的问题-->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<spring-cloud.version>Finchley.RC2</spring-cloud.version>
 		<java.version>1.8</java.version>
 	</properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-			<version>1.4.4.RELEASE</version>
-		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -61,14 +32,6 @@
 	</build>
 
 	<repositories>
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
 		<repository>
 			<id>maven-public</id>
 			<name>Iciyun Releases</name>
@@ -97,6 +60,18 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>maven-releases</id>
+			<name>Internal Releases</name>
+			<url>http://localhost:8888/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>maven-snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://localhost:8888/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 
 </project>
