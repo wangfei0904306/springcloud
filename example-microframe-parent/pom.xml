@@ -18,10 +18,6 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<modules>
-		<module>example-microframe-common</module>
-	</modules>
-
 	<properties>
 		<start-class>com.xx.webapps.api.main.WebappsApiBidMain</start-class> <!--解决打包时找不到main的问题-->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,6 +26,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.example.microframe</groupId>
+			<artifactId>example-microframe-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 	</dependencies>
 
