@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>example-microframe-common</name>
-	<description>常用工具类</description>
+	<description>通用工具类</description>
 
 
 	<properties>
