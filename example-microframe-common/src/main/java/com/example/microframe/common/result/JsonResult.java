@@ -3,7 +3,7 @@ package com.example.microframe.common.result;
 import java.io.Serializable;
 
 /**
- * 封装json结果集
+ * 封装前端调用结果集
  */
 public class JsonResult<T>  implements Serializable {
 
