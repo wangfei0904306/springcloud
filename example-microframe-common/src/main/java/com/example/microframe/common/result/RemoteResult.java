@@ -9,10 +9,10 @@ public class RemoteResult<T>  implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Integer code;          // 返回是否成功
-    private String msg = "";                  // 返回信提示，可用于前端显示
-    private String detail = "";               // 返回信息详情，保存不便于前端展示的内容
-    private T obj = null;                     // 返回其他对象信息
+    private Integer code = 500;          // 返回是否成功
+    private String msg = "";             // 返回信提示，可用于前端显示
+    private String detail = "";          // 返回信息详情，保存不便于前端展示的内容
+    private T obj = null;                // 返回其他对象信息
 
     public RemoteResult() {
     }
