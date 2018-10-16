@@ -1,4 +1,4 @@
-package com.example.microframe.common.constant;
+package com.example.common.constant;
 
 public class HeaderConstants {
 

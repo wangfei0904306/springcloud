@@ -1,4 +1,4 @@
-package com.example.microframe.common.result;
+package com.example.common.result;
 
 import java.io.Serializable;
 

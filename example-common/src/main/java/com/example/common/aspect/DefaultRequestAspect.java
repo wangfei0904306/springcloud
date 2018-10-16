@@ -1,5 +1,6 @@
-package com.example.microframe.common.aspect;
+package com.example.common.aspect;
 
+import com.example.common.constant.HeaderConstants;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
@@ -13,7 +14,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import static com.example.microframe.common.constant.HeaderConstants.*;
 
 /**
  * @author wangfei
@@ -51,7 +51,7 @@ public class DefaultRequestAspect {
 		}
 
 		// 客户端版本
-		String version = request.getHeader(X_VERSION);
+		String version = request.getHeader(HeaderConstants.X_VERSION);
 		if(StringUtils.isNotEmpty(version)){
 			SysContext.putVersion(version);
 		}

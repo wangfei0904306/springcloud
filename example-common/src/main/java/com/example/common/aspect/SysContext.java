@@ -1,4 +1,4 @@
-package com.example.microframe.common.aspect;
+package com.example.common.aspect;
 
 import com.alibaba.fastjson.JSON;
 

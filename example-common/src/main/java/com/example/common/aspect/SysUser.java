@@ -1,4 +1,4 @@
-package com.example.microframe.common.aspect;
+package com.example.common.aspect;
 
 public class SysUser {
     private Long id;

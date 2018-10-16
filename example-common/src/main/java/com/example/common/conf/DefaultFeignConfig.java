@@ -1,6 +1,6 @@
-package com.example.microframe.common.conf;
+package com.example.common.conf;
 
-import com.example.microframe.common.aspect.SysContext;
+import com.example.common.aspect.SysContext;
 import feign.Feign;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
@@ -9,7 +9,7 @@ import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Configuration;
-import static com.example.microframe.common.constant.HeaderConstants.*;
+import static com.example.common.constant.HeaderConstants.*;
 
 @Configuration
 @ConditionalOnClass(Feign.class)
