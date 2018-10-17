@@ -72,7 +72,7 @@
 		<repository>
 			<id>maven-public</id>
 			<name>Iciyun Releases</name>
-			<url>http://localhost:8888/repository/maven-public/</url>
+			<url>http://localhost:8081/repository/maven-public/</url>
 			<releases>
 				<enabled>true</enabled>
 				<updatePolicy>always</updatePolicy>
@@ -81,20 +81,11 @@
 		<repository>
 			<id>maven-releases</id>
 			<name>Iciyun Releases</name>
-			<url>http://localhost:8888/repository/maven-releases/</url>
+			<url>http://localhost:8081/repository/maven-releases/</url>
 			<releases>
 				<enabled>false</enabled>
 				<updatePolicy>always</updatePolicy>
 			</releases>
-		</repository>
-		<repository>
-			<id>maven-snapshots</id>
-			<name>Nexus Snapshots</name>
-			<url>http://localhost:8888/repository/maven-iciyun/</url>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
 		</repository>
 	</repositories>
 
