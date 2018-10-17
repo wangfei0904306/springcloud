@@ -1,7 +1,7 @@
 package com.example.order.api.service;
 
 
-import com.example.microframe.common.RemoteResult;
+import com.example.common.result.RemoteResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
