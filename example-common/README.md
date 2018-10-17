@@ -5,8 +5,8 @@ common模块
 总父项目example-microframe-parent直接依赖此包，各个微服务可以直接使用
 ~~~
 		<dependency>
-			<groupId>com.example.microframe</groupId>
-			<artifactId>example-microframe-common</artifactId>
+			<groupId>com.example</groupId>
+			<artifactId>example-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 ~~~
